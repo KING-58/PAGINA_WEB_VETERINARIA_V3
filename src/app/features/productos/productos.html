@@ -1,0 +1,24 @@
+<h2>Nuestros Productos</h2>
+
+<!-- FILTROS -->
+<div class="filtros">
+  <button 
+    *ngFor="let cat of categorias" 
+    [class.active]="categoriaActiva === cat.nombre"
+    (click)="cambiarCategoria(cat.nombre)">
+    {{cat.icono}} {{cat.nombre}}
+  </button>
+</div>
+
+<!-- GRID DE PRODUCTOS -->
+<div class="productos-grid">
+  <div class="card" *ngFor="let p of productosFiltrados">
+    <img [src]="p.imagen" [alt]="p.nombre">
+    <div class="card-content">
+      <h3>{{ p.nombre }}</h3>
+      <p>{{ p.descripcion }}</p>
+      <span class="precio">\${{ p.precio }}</span>
+      <button>Agregar al Carrito</button>
+    </div>
+  </div>
+</div>

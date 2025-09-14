@@ -1,0 +1,12 @@
+<div class="galeria-container">
+  <h2>Nuestro Trabajo</h2>
+  <div class="galeria-grid">
+    <div class="galeria-card" *ngFor="let t of trabajos">
+      <img [src]="'assets/img/' + t.imagen" [alt]="t.titulo">
+      <div class="overlay">
+        <span *ngIf="t.video">▶</span>
+        <p>{{ t.titulo }}</p>
+      </div>
+    </div>
+  </div>
+</div>
