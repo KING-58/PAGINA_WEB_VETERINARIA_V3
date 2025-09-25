@@ -1,0 +1,19 @@
+<h2>Reservar Cita</h2>
+
+<div class="form-reserva">
+  <label>Nombre del dueño:</label>
+  <input type="text" [(ngModel)]="nombre" placeholder="Ingresa tu nombre" />
+
+  <label>Nombre de la mascota:</label>
+  <input type="text" [(ngModel)]="mascota" placeholder="Ej: Firulais" />
+
+  <label>Fecha:</label>
+  <input type="date" [(ngModel)]="fecha" />
+
+  <label>Hora:</label>
+  <input type="time" [(ngModel)]="hora" />
+
+  <button (click)="reservar()">Confirmar Reserva</button>
+
+  <p *ngIf="mensaje" class="mensaje">{{ mensaje }}</p>
+</div>

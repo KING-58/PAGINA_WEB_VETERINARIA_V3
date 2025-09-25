@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-productos',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './productos.html',
   styleUrls: ['./productos.css']
 })
@@ -21,6 +22,7 @@ export class ProductosComponent {
   ];
 
   categoriaActiva = 'Todos';
+   terminoBusqueda: string = '';
 
   productos = [
   // 🐕 PERROS

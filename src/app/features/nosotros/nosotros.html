@@ -1,1 +1,32 @@
-<p>nosotros works!</p>
+<section class="nosotros">
+  <h2>Sobre Nosotros</h2>
+  <p class="intro">
+    En <strong>Veterinaria Curiosidades</strong> nos dedicamos al cuidado integral de tus mascotas.
+    Nuestro equipo de profesionales está comprometido en brindar servicios de calidad, amor y respeto
+    hacia cada uno de nuestros pacientes peludos.
+  </p>
+
+  <div class="valores">
+    <div class="card">
+      <h3>🐾 Misión</h3>
+      <p>Ofrecer servicios veterinarios de excelencia para garantizar la salud y bienestar de las mascotas.</p>
+    </div>
+    <div class="card">
+      <h3>🌟 Visión</h3>
+      <p>Ser reconocidos como la clínica veterinaria líder en confianza, innovación y trato humano.</p>
+    </div>
+    <div class="card">
+      <h3>💚 Valores</h3>
+      <p>Compromiso, empatía, profesionalismo y respeto por la vida animal.</p>
+    </div>
+  </div>
+
+  <h2>Nuestro Equipo</h2>
+  <div class="equipo">
+    <div *ngFor="let miembro of equipo" class="card-equipo">
+      <img [src]="miembro.imagen" [alt]="miembro.nombre">
+      <h4>{{ miembro.nombre }}</h4>
+      <p>{{ miembro.rol }}</p>
+    </div>
+  </div>
+</section>

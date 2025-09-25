@@ -9,12 +9,14 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./galeria.css']
 })
 export class GaleriaComponent {
-  trabajos = [
-    { titulo: 'Sala de Espera', imagen: 'SALA_ESPERA.jpg' },
-    { titulo: 'Quirófano', imagen: 'QUIRUFANO.jpg' },
-    { titulo: 'Sala de Baños', imagen: 'sala-banos.jpg' },
-    { titulo: 'Proceso de Baño', imagen: 'proceso-bano.jpg', video: true },
-    { titulo: 'Farmacia', imagen: 'farmacia.jpg' },
-    { titulo: 'Consejos de Cuidado', imagen: 'consejos.jpg', video: true }
-  ];
+trabajos = [
+  { titulo: 'SALA DE ESPERA', imagen: '/SALA_ESPERA.jpg' },
+  { titulo: 'QUIRUFANO', imagen: '/QUIRUFANO.jpg' },
+  { titulo: 'SALA DE BAÑOS', imagen: '/SALA_BAÑOS.jpg' },
+  { titulo: 'PROCESO DE BAÑOS', imagen: '/FARMACIA.jpg', video: true },
+  { titulo: 'FARMACIA', imagen: '/FARMACIA.jpg' },
+  { titulo: 'CONSEJOS DE CUIDADO', imagen: '/FARMACIA.jpg', video: true }
+];
+
+
 }

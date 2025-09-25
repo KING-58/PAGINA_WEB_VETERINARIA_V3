@@ -45,3 +45,60 @@
   font-weight: bold;
   color: #0a7a46;
 }
+
+
+
+
+/* 🔹 SECCIÓN PRODUCTOS CON DEGRADADO SUAVE */
+:host {
+  display: block;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+
+  /* Fondo combinando con el navbar */
+  background: linear-gradient(135deg, #56ebff, #ff96ed, #8bf1ff);
+}
+
+/* TÍTULO */
+h2 {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4b5563;
+}
+
+
+
+
+/* 🔹 Encabezado con título y buscador */
+.productos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.productos-header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+/* 🔹 Barra de búsqueda */
+.search-bar input {
+  padding: 0.6rem 1rem;
+  width: 280px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.search-bar input:focus {
+  border-color: #7f00ff; /* morado suave */
+  box-shadow: 0 0 10px rgba(127, 0, 255, 0.3);
+}
