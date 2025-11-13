@@ -10,13 +10,43 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./reservas.css']
 })
 export class ReservasComponent {
-  nombre = '';
-  mascota = '';
+  nombrePropietario = '';
+  nombreMascota = '';
+  motivo = '';
+  especie = '';
+  sexo = '';
+  edad: number | null = null;
+  raza = '';
   fecha = '';
   hora = '';
-  mensaje = '';
+  firma = '';
+  monto: number | null = null;
 
   reservar() {
-    this.mensaje = `✅ Reserva confirmada para ${this.mascota} a nombre de ${this.nombre} el día ${this.fecha} a las ${this.hora}.`;
+    // ✅ Número de WhatsApp del veterinario
+    const numero = '51957682140';
+
+    // 📩 Mensaje con formato para enviar a WhatsApp
+    const mensaje = `🐾 *Reserva de Cita - Veterinaria Curiosidades* 🐾
+
+👤 Propietario: ${this.nombrePropietario}
+🐶 Mascota: ${this.nombreMascota}
+📋 Motivo: ${this.motivo}
+🦴 Especie: ${this.especie}
+⚧ Sexo: ${this.sexo}
+🎂 Edad: ${this.edad ?? 'No indicada'}
+🐕 Raza: ${this.raza}
+📅 Fecha: ${this.fecha}
+🕒 Hora: ${this.hora}
+✍️ Firma: ${this.firma}
+💵 Monto adelanto: S/${this.monto ?? 0}
+
+📞 Por favor confirmar la cita. ¡Gracias!`;
+
+    // 🔗 Crear el enlace para WhatsApp
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+    // 🚀 Abrir WhatsApp en una nueva pestaña
+    window.open(url, '_blank');
   }
 }

@@ -1,17 +1,48 @@
-<h2>Reservar Cita</h2>
+<h2>RESERVA TU CITA PARA TU MASCOTA</h2>
 
 <div class="form-reserva">
-  <label>Nombre del dueño:</label>
-  <input type="text" [(ngModel)]="nombre" placeholder="Ingresa tu nombre" />
+  <label>Nombre del propietario:</label>
+  <input type="text" [(ngModel)]="nombrePropietario" placeholder="Ingresa tu nombre completo" />
 
   <label>Nombre de la mascota:</label>
-  <input type="text" [(ngModel)]="mascota" placeholder="Ej: Firulais" />
+  <input type="text" [(ngModel)]="nombreMascota" placeholder="Ej: Firulais" />
 
-  <label>Fecha:</label>
-  <input type="date" [(ngModel)]="fecha" />
+  <label>Motivo de la visita:</label>
+  <input type="text" [(ngModel)]="motivo" placeholder="Ej: Vacunación, revisión, emergencia..." />
 
-  <label>Hora:</label>
-  <input type="time" [(ngModel)]="hora" />
+  <label>Especie:</label>
+  <select [(ngModel)]="especie">
+    <option value="" disabled selected>Selecciona la especie</option>
+    <option>Perro</option>
+    <option>Gato</option>
+    <option>Ave</option>
+    <option>Otro</option>
+  </select>
+
+  <label>Sexo:</label>
+  <select [(ngModel)]="sexo">
+    <option value="" disabled selected>Selecciona el sexo</option>
+    <option>Macho</option>
+    <option>Hembra</option>
+  </select>
+
+  <label>Edad:</label>
+  <input type="number" [(ngModel)]="edad" placeholder="Ej: 2 años" />
+
+  <label>Raza:</label>
+  <input type="text" [(ngModel)]="raza" placeholder="Ej: Labrador, Siames..." />
+
+  <label>Fecha y hora:</label>
+  <div class="fecha-hora">
+    <input type="date" [(ngModel)]="fecha" />
+    <input type="time" [(ngModel)]="hora" />
+  </div>
+
+  <label>Firma del interesado:</label>
+  <input type="text" [(ngModel)]="firma" placeholder="Nombre o firma digital" />
+
+  <label>Monto de adelanto (S/):</label>
+  <input type="number" [(ngModel)]="monto" placeholder="Ej: 50.00" />
 
   <button (click)="reservar()">Confirmar Reserva</button>
 

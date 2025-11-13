@@ -18,7 +18,9 @@ export class ProductosComponent {
     { nombre: 'Medicinas', icono: '💊' },
     { nombre: 'Alimentos', icono: '🍖' },
     { nombre: 'Accesorios', icono: '🎀' },
-    { nombre: 'Higiene', icono: '🛁' }
+    { nombre: 'Higiene', icono: '🛁' },
+    { nombre: 'Venta de Mascotas', icono: '🐾' }
+
   ];
 
   categoriaActiva = 'Todos';
@@ -92,6 +94,18 @@ export class ProductosComponent {
   { nombre: 'Pasta Dental Canina', descripcion: 'Pasta dental con sabor a pollo para perros.', precio: 8.5, categoria: 'Higiene', imagen: 'HIGIENE5.jpg' },
   { nombre: 'Desodorante en Spray', descripcion: 'Spray neutralizador de olores para mascotas.', precio: 13.0, categoria: 'Higiene', imagen: 'HIGIENE6.jpg' },
   { nombre: 'Guantes Removedores de Pelo', descripcion: 'Guantes que eliminan pelo suelto mientras acaricias.', precio: 9.0, categoria: 'Higiene', imagen: 'HIGIENE7.jpg' },
+
+
+
+    // 🐾 VENTA DE MASCOTAS
+  { nombre: 'Cachorro Labrador', descripcion: 'Tiernos perritos Labrador de 2 meses, vacunados y desparasitados.', precio: 350.0, categoria: 'Venta de Mascotas', imagen: 'CACHORRO.jpg' },
+  { nombre: 'Gato Persa Bebé', descripcion: 'Gatitos persas peludos, juguetones y listos para adopción.', precio: 280.0, categoria: 'Venta de Mascotas', imagen: 'GATO PERSA.jpg' },
+  { nombre: 'Hamster Sirio', descripcion: 'Hamster dócil y divertido, ideal para niños.', precio: 35.0, categoria: 'Venta de Mascotas', imagen: 'HAMSTER.jpg' },
+  { nombre: 'Cuy Peruano', descripcion: 'Cuyes jóvenes, saludables y bien alimentados.', precio: 25.0, categoria: 'Venta de Mascotas', imagen: 'CUY.jpg' },
+  { nombre: 'Conejo Mini Lop', descripcion: 'Conejitos bebés de orejas caídas, muy sociables.', precio: 60.0, categoria: 'Venta de Mascotas', imagen: 'CONEJO.jpg' },
+  { nombre: 'Perico Australiano', descripcion: 'Coloridos pericos parlanchines, en pareja o individual.', precio: 40.0, categoria: 'Venta de Mascotas', imagen: 'PERICO.jpg' },
+  { nombre: 'Canario Cantor', descripcion: 'Ave melodiosa ideal para el hogar, en jaula lista.', precio: 45.0, categoria: 'Venta de Mascotas', imagen: 'CANARIO.jpg' },
+
   
 ];
 

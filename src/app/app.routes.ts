@@ -1,10 +1,10 @@
-
 import { Routes } from '@angular/router';
 import { ProductosComponent } from './features/productos/productos';
 import { ServiciosComponent } from './features/servicios/servicios';
 import { GaleriaComponent } from './features/galeria/galeria';
 import { NosotrosComponent } from './features/nosotros/nosotros';
 import { ReservasComponent } from './features/reservas/reservas';
+import { DomicilioComponent } from './features/domicilio/domicilio'; 
 
 export const routes: Routes = [
   { path: '', redirectTo: 'productos', pathMatch: 'full' },
@@ -12,5 +12,6 @@ export const routes: Routes = [
   { path: 'servicios', component: ServiciosComponent },
   { path: 'galeria', component: GaleriaComponent },
   { path: 'nosotros', component: NosotrosComponent },
-  { path: 'reservas', component: ReservasComponent }
+  { path: 'reservas', component: ReservasComponent },
+  { path: 'domicilio', component: DomicilioComponent } 
 ];

@@ -1,0 +1,13 @@
+<h2>SERVICIO A DOMICILIO</h2>
+<p class="intro">Llevamos la atención veterinaria directamente a la puerta de tu hogar. Conoce nuestros servicios:</p>
+
+<div class="domicilio-grid">
+  <div class="card" *ngFor="let s of servicios">
+    <img [src]="s.imagen" [alt]="s.nombre">
+    <div class="card-content">
+      <h3>{{ s.nombre }}</h3>
+      <p>{{ s.descripcion }}</p>
+      
+    </div>
+  </div>
+</div>
