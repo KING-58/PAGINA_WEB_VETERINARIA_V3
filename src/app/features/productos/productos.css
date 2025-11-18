@@ -13,7 +13,7 @@
 }
 
 .filtros button.active {
-  background: #0a7a46;
+  background: #450094;
   color: white;
 }
 
@@ -21,6 +21,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
+  background: ;
 }
 
 .card {
@@ -101,4 +102,87 @@ h2 {
 .search-bar input:focus {
   border-color: #7f00ff; /* morado suave */
   box-shadow: 0 0 10px rgba(127, 0, 255, 0.3);
+}
+
+
+
+
+
+
+.no-resultados {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 15px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+.card-content {
+  padding: 14px 16px 16px;
+  background: #ffffff;
+  border-radius: 0 0 16px 16px;
+  border-top: 1px solid #f3e8ff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Nombre del producto */
+.card-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #2d1b5a; /* morado oscuro */
+}
+
+/* Descripción */
+.card-content p {
+  font-size: 14px;
+  color: #6b6b6b;
+  margin: 0;
+}
+
+/* Precio */
+.card-content .precio {
+  font-size: 17px;
+  font-weight: 700;
+  color: #7c3aed; /* morado principal */
+  margin-top: 4px;
+}
+
+/* Botón morado */
+.card-content button {
+  margin-top: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #7c3aed;      /* morado principal */
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: stretch;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.card-content button:hover {
+  background: #6d28d9;      /* morado más oscuro */
+  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.35);
+  transform: translateY(-1px);
+}
+
+.card-content button:active {
+  transform: translateY(0);
+  box-shadow: none;
 }

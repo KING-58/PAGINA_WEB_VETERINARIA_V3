@@ -3,23 +3,25 @@
   <h2>NUESTROS PRODUCTOS</h2>
 
   <div class="search-bar">
-    <input type="text" [(ngModel)]="terminoBusqueda" placeholder="🔍 Buscar productos...">
+    <input
+      type="text"
+      [(ngModel)]="terminoBusqueda"
+      placeholder="🔍 Buscar productos..."
+    >
   </div>
 </div>
 
-
-<!-- FILTROS -->
 <div class="filtros">
-  <button 
-    *ngFor="let cat of categorias" 
+  <button
+    *ngFor="let cat of categorias"
     [class.active]="categoriaActiva === cat.nombre"
     (click)="cambiarCategoria(cat.nombre)">
     {{cat.icono}} {{cat.nombre}}
   </button>
 </div>
 
-<!-- GRID DE PRODUCTOS -->
 <div class="productos-grid">
+  <!-- TARJETAS -->
   <div class="card" *ngFor="let p of productosFiltrados">
     <img [src]="p.imagen" [alt]="p.nombre">
     <div class="card-content">
@@ -28,5 +30,10 @@
       <span class="precio">\${{ p.precio }}</span>
       <button>Agregar al Carrito</button>
     </div>
+  </div>
+
+  <!-- MENSAJE SI NO HAY RESULTADOS -->
+  <div class="no-resultados" *ngIf="productosFiltrados.length === 0">
+    😿 Producto no encontrado. Intenta con otro nombre o categoría.
   </div>
 </div>
